@@ -234,6 +234,20 @@ hr {
     .footer-links .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .pie-pagina .grupo-1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+        padding: 22px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box, .pie-pagina .grupo-1 .red-social{
+        text-align: center;
+    }
 }
 
 
