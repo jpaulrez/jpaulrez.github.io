@@ -1,9 +1,18 @@
+/* Hoja de estilos externa */
+
+/* Fuente */
+@font-face {
+    font-family: sans-serif;
+    src: url(font/sans-serif);
+}
+
 /* https://color.adobe.com/es/color%20theme_1-color-theme-19918761 */
 :root {
     /* Declaración de variables para colores */
     --color1: #34322d;
     --color2: #b69b79;
     --color3: #999;
+    --color4: #625f5f;
     --color-negro:#000000;
     --color-blanco:#ffffff;
     --color-pastel: #f2eee9;
@@ -16,22 +25,29 @@
     padding: 0;
 } 
 
-body {
-    background: rgb(255, 255, 255);
-    color: black;
-    font-family: 'Readex Pro', sans-serif;
-}
-
 html {
     scroll-behavior: smooth; /* Para que al scrollear sea vea suave */
 }
 
-a {
+body {
+    background: rgb(255, 255, 255);
     color: black;
+    font-family:'Barlow',sans-serif; /* Fuente de texto */
+}
+
+a {
+    color: var(--color-negro);
     text-decoration: none;
 }
 ul {
     list-style: none;
+}
+
+p {
+    font-family: 'Barlow',sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--color4);
 }
 
 .container {
@@ -45,20 +61,22 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 70px;
     padding: 20px 0;
 }
 
 .nav-brand {
-    width: 300px;
+    width: 260px;
+    margin-top: 15px;
 }
 
 /* Navbar Left */
 .nav-main ul {
     display: flex;
 }
+/* Controla el espacio que hay entre los elementos */
 .nav-main ul li {
-    padding: 10px;
+    padding: 20px;
 }
 .nav-main ul li a {
     padding: 4px;
@@ -66,6 +84,7 @@ ul {
 .nav-main ul li a:hover {
     border-bottom: 2px solid black;
 }
+/* Controla la ubicación de los elementos del navegador */
 .nav-main ul.nav-menu {
     flex: 1;
     margin-left: 20px;
@@ -177,7 +196,7 @@ hr {
 }
 
 #scroll-arriba:hover {
-    background-color: var(--color2);
+    background-color: var(--color-negro);
     color: var(--color-blanco);
     box-shadow: -3px 8px 25px 0px rgba(24, 41, 64, 0.3);
     transform: translateY(-3px);
@@ -188,7 +207,6 @@ hr {
 @media (max-width: 700px) {
     .menu-btn {
         display: block;
-        z-index: 2;
     }
 
     .menu-btn:hover {
@@ -211,8 +229,8 @@ hr {
     }
 
     .nav-main ul.nav-menu li {
-        padding: 20px;
-        font-size: 14px;
+        padding: 25px;
+        font-size: 18px;
     }
 
     .nav-main ul.nav-menu li:last-child {
@@ -221,10 +239,6 @@ hr {
 
     .nav-main ul.nav-menu.show {
         transform: translatex(-20px);
-    }
-
-    .nav-main ul.nav-menu-right {
-        margin-right: 50px;
     }
     
     .galeria {
@@ -245,7 +259,8 @@ hr {
         padding: 22px 0px;
     }
 
-    .pie-pagina .grupo-1 .box, .pie-pagina .grupo-1 .red-social{
+    .pie-pagina .grupo-1 .box, 
+    .pie-pagina .grupo-1 .red-social{
         text-align: center;
     }
 }
