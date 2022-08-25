@@ -1,0 +1,367 @@
+/* Hoja de estilos externa */
+
+/* Fuente */
+@font-face {
+    font-family: sans-serif;
+    src: url(font/sans-serif);
+}
+
+/* https://color.adobe.com/es/color%20theme_1-color-theme-19918761 */
+:root {
+    /* Declaración de variables para colores */
+    --color1: #34322d;
+    --color2: #b69b79;
+    --color3: #999;
+    --color4: #625f5f;
+    --color-negro:#000000;
+    --color-blanco:#ffffff;
+    --color-pastel: #f2eee9;
+    --marron-oscuro: #202020;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+html {
+    scroll-behavior: smooth; /* Para que al scrollear sea vea suave */
+}
+
+body {
+    background: rgb(255, 255, 255);
+    color: black;
+    font-family:'Barlow',sans-serif; /* Fuente de texto */
+}
+
+a {
+    color: var(--color-negro);
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+p {
+    font-family: 'Barlow',sans-serif;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--color4);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* Navigation */
+.nav-main {
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 20px 0;
+}
+
+.nav-brand {
+    width: 260px;
+    margin-top: 15px;
+}
+
+/* Navbar Left */
+.nav-main ul {
+    display: flex;
+}
+/* Controla el espacio que hay entre los elementos */
+.nav-main ul li {
+    padding: 20px;
+}
+.nav-main ul li a {
+    padding: 4px;
+}
+.nav-main ul li a:hover {
+    border-bottom: 2px solid black;
+}
+/* Controla la ubicación de los elementos del navegador */
+.nav-main ul.nav-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+hr {
+    margin: 10px 0;
+}
+
+/* Responsive Button */
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+}
+
+/* pictures */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.galeria a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria img {
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    padding: 5px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.light-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-blanco);
+    /* transition: transform .3s ease-in-out; */
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    /* centra la imagen al medio */
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    transform: scale(0);
+}
+
+.light-box img {
+    width: 35%;
+    max-height: 95%;
+    padding: 15px;
+}
+
+.light-box:target {
+    transform: scale(1);
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    background: var(--color4);
+    color: var(--color-blanco);
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: solid 1px var(--color-blanco);
+    opacity: 0.9;
+}
+
+.next,
+.back {
+    display: block;
+    background: var(--color4);
+    color: var(--color-blanco);
+    text-decoration: none;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    border: solid 1px var(--color-blanco);
+    opacity: 0.8;
+}
+
+/* Pie de pagina */
+
+.pie-pagina {
+    width: 100%;
+    background-color: var(--color-blanco);
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 30px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: var(--color-negro);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.pie-pagina i {
+    font-size: 25px;
+    color: var(--color3);
+    padding: 10px 6px;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: var(--marron-oscuro);
+    padding: 15px 10px;
+    text-align: center;
+} 
+
+.pie-pagina .grupo-2 small{
+    color: var(--color-blanco);
+}
+
+/* Pie de pagina */
+
+#scroll-arriba {
+    background-color: var(--color3);
+    color: var(--color-blanco);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    border: solid 2px var(--color-blanco);
+    text-align: center;
+    border-radius: 50%;
+
+    /* Posicionamiento y coordenadas */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    transition: all 0.5s ease-in-out;
+
+    /* Ocultar el botón al cargar la página */
+    opacity: 0;
+}
+
+#scroll-arriba:hover {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    box-shadow: -3px 8px 25px 0px rgba(24, 41, 64, 0.3);
+    transform: translateY(-3px);
+}
+
+
+/* Mobil */
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-btn:hover {
+        opacity: 0.5;
+    }
+
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: gray;
+        width: 35%;
+        height: 100%;
+        border-right: #ccc 1px solid;
+        opacity: .8;
+        padding: 10px;
+        transform: translatex(-500px);
+        transition: transform 0.5s ease-in-out;
+        z-index: 1001;
+    }
+
+    .nav-main ul.nav-menu li {
+        padding: 25px;
+        font-size: 18px;
+    }
+
+    .nav-main ul.nav-menu li:last-child {
+        border-bottom: 0;
+    }
+
+    .nav-main ul.nav-menu.show {
+        transform: translatex(-20px);
+    }
+    
+    .galeria {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .light-box img {
+        width: 90%;
+        max-height: 95%;
+    }
+
+    .close {
+        position: absolute;
+        top: 88%;
+        right: 47%;
+    }
+
+    .back {
+        position: absolute;
+        top: 88%;
+        left: 35%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .next {
+        position: absolute;
+        top: 88%;
+        right: 35%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pie-pagina .grupo-1 {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 5px;
+        padding: 22px 0px;
+    }
+
+    .pie-pagina .grupo-1 .box, 
+    .pie-pagina .grupo-1 .red-social{
+        text-align: center;
+    }
+}
+
+
+
+
+
