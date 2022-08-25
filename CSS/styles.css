@@ -361,7 +361,35 @@ hr {
     }
 }
 
+/* IPHONE */
 
+@media (max-width: 390px) {
 
+    .light-box img {
+        width: 95%;
+    }
 
+    .close {
+        top: 88%;
+        right: 45%;
+        opacity: 0.5;
+    }
 
+    .next {
+        right: 30%;
+        opacity: 0.5;
+    }
+
+    .back {
+        left: 30%;
+        opacity: 0.5;
+    }
+}
+
+/* IPAD */
+
+@media (max-width: 820px) {
+    .light-box img {
+        width: 85%;
+    }
+}
