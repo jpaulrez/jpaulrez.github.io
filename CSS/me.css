@@ -358,10 +358,9 @@ hr {
 
 @media (max-width: 375px) {
     .about-me-dates-left {
-        width: 30%;
-        padding: 1% 1%;
-        bottom: 59%;
+        bottom: 56%;
         }
+    
 }
 
 @media (max-width: 414px) {
