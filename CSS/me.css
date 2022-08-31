@@ -356,15 +356,8 @@ hr {
     }
 }
 
-@media (max-width: 375px) {
-    .about-me-dates-left {
-        bottom: 56%;
-        }
-    
-}
-
 @media (max-width: 414px) {
     .about-me-dates-left {
-        bottom: 70%;
+        bottom: 57%;
         }
 }
