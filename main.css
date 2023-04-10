@@ -1,0 +1,113 @@
+.img-gallery {
+    width: 100%;
+    margin: auto;
+    list-style: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.caption {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-md-4:hover .caption {
+    opacity: 1;
+}
+
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #4b4b4b;
+}
+
+.video-container h2 {
+    color: white;
+}
+
+.video-container iframe {
+    width: 100%;
+
+    margin: auto;
+    list-style: none;
+    padding: 5px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4b4b4b;
+    border-radius: 30%;
+    border-color: black;
+    display: none;
+    /* Ocultar el botón al cargar la página */
+    z-index: 9999;
+    /* Asegurar que el botón esté siempre visible */
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.slider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+}
+
+.slider-text h2 {
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+    .slider-text h2 {
+        font-size: 3rem;
+    }
+}
+
+/* Estilos para iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .slider-text h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+    .slider-text h2 {
+        font-size: 1rem;
+    }
+}
