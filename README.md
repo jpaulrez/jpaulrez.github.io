@@ -1,2 +1,3 @@
 # jpaulrez.github.io
-Pagina Web by jpaul
+En este proyecto, he utilizado diferentes herramientas y tecnologías como Bootstrap, jQuery e Intersection Observer para construir un sitio web atractivo y fácil de navegar. Además, he integrado videos propios desde Vimeo y he utilizado Firebase como base de datos para incluir un formulario de contacto. Para realizar un seguimiento del tráfico y el comportamiento de los usuarios, he implementado Google Analytics en el sitio web. Espero que disfrutes de mi trabajo y no dudes en ponerte en contacto conmigo si tienes alguna pregunta o comentario. ¡Gracias por visitar mi GitHub!
+Pagina Web by jpaulrez
